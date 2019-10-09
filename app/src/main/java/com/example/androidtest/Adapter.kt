@@ -11,7 +11,7 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import kotlinx.android.synthetic.main.view_list_item.view.*
 
-class Adapter : PagedListAdapter<Hit, Adapter.ViewHolder>(DiffCalback()),
+class Adapter : PagedListAdapter<Hit, Adapter.ViewHolder>(DiffCallback()),
     CompoundButton.OnCheckedChangeListener {
     override fun onCheckedChanged(button: CompoundButton?, checked: Boolean) {
     }
@@ -80,7 +80,7 @@ class Adapter : PagedListAdapter<Hit, Adapter.ViewHolder>(DiffCalback()),
     }
 
 
-    class DiffCalback : DiffUtil.ItemCallback<Hit>() {
+    class DiffCallback : DiffUtil.ItemCallback<Hit>() {
         override fun areItemsTheSame(oldItem: Hit, newItem: Hit): Boolean {
             return oldItem.objectID == newItem.objectID
         }

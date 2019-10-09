@@ -69,6 +69,10 @@ class MainActivity : AppCompatActivity() {
             })
     }
 
+    override fun onDestroy() {
+        super.onDestroy()
+        viewModel.unsubscribe()
+    }
 
     private val actionModeCallback = object : android.view.ActionMode.Callback {
         override fun onCreateActionMode(mode: android.view.ActionMode, menu: Menu): Boolean {

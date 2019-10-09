@@ -6,7 +6,7 @@ import androidx.paging.PagedList
 import java.util.concurrent.Executors
 
 class ViewModel : androidx.lifecycle.ViewModel() {
-    lateinit var hits: LiveData<PagedList<Hit>>
+    var hits: LiveData<PagedList<Hit>>
     private val dataSourceFactory = ApiDataSource.Factory()
 
     init {
